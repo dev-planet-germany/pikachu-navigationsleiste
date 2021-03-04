@@ -1,0 +1,176 @@
+header {
+    position: relative;
+}
+
+#hauptnavigation {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-image: linear-gradient(to right, #571a00, #ffb44b);
+    display: flex;
+}
+
+.logobereich {
+    width: 24%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-logo {
+    background-image: url(bilder/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+}
+
+.navigationsbereich {
+    width: 76%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-oben {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-right: 26vw;
+    padding-left: 2%;
+    box-sizing: border-box;
+}
+
+.nav-oben a {
+    color: white;
+}
+
+.nav-link {
+    font-size: 1.2em;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+.nav-icon {
+    font-size: 1.2em;
+}
+
+.nav-unten {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    clip-path: polygon(2% 0%, 100% 0%, 100% 100%, 0% 100%);
+    padding-left: 2%;
+}
+
+.navigationspunkte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.nav-punkt {
+    color: black;
+}
+
+.nav-punkt:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav-punkt.aktiv {
+    font-weight: bolder;
+    color: #fc9709;
+}
+
+.nav-suchbereich {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24vw;
+}
+
+.nav-suchfeld {
+    padding: 1%;
+    width: 50%;
+    border-radius: 20px;
+    border: 2px solid #999;
+    box-shadow: inset 0 0 5px #aaa;
+}
+
+.nav-suchfeld:focus {
+    outline: none;
+}
+
+.fa-search {
+    color: #999;
+    margin-right: 10px;
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding-top: 10px;
+    }
+
+    #hauptnavigation {
+        flex-direction: column;
+        height: 50px;
+    }
+
+    .nav-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    #hauptnavigation div {
+        width: 100%;
+    }
+
+    .navigationsbereich {
+        display: none;
+    }
+
+    .nav-oben {
+        display: none;
+    }
+
+    .nav-unten {
+        display: none;
+    }
+
+    .hamburger-icon {
+        display: block;
+        position: absolute;
+        top: 3px;
+        right: 12px;
+        font-size: 30px;
+        color: white;
+        user-select: none;
+    }
+
+    .navigation-geoeffnet .navigationsbereich {
+        display: flex;
+        padding-top: 10px;
+    }
+
+    .navigation-geoeffnet .nav-unten {
+        display: flex;
+        flex-direction: column-reverse;
+        border-bottom: 1px solid gray;
+    }
+
+    .navigation-geoeffnet .navigationspunkte {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
